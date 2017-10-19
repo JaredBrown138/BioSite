@@ -1,35 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Nova+Mono|Rubik');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
+
+
 body{
     margin: 0;
+
 }
 .asideMenu{
     position: absolute;
     top: 0px;
-    background-color: #616161;
-    height: 100%;
+    background-color: #181818;
+    height: 100vh;
     width: 20%;
     -webkit-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.46);
     -moz-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.46);
     box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.46);
+    z-index: 100;
+    min-width: 230px;
 
 }
 .profilePhoto{
     width: 60%;
     position: relative;
     margin-top: 40px;
-    margin-left: 19%;
+    margin-left: 18%;
     border: 10px solid white;
     -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
     -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
     box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
+    filter: grayscale(100%);
+
 }
+
+
 .main{
     height: 100%;
 }
 .name{
-    font-family: 'Josefin Slab', serif;
-    font-size: 3em;
+    font-family: 'Fugaz One', cursive;
+    font-size: 2.8em;
     color: white;
     text-align: center;
     margin-top: 15px;
-    text-shadow: 3px 3px 7px rgba(150, 150, 150, 0.33);
+    /*text-shadow: 3px 3px 7px rgba(150, 150, 150, 0.33); */
+}
+.name:hover{
+    text-decoration: underline;
+}
+a:visited{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.decadeContainer{
+    width: 100%;
+    background-color: #181818;
+
+    position: relative;
+    padding-bottom: 5px;
+
+
+
+}
+.decadeButton{
+    display: block;
+    width: 70%;
+    background-color: #181818;
+    font-size: 1.5em;
+    margin-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
+    border: 1px solid white;
+    border-left: 35px solid white;
+}
+.main{
+    position: absolute;
+    left: 20%;
+    min-width: 800px;
+}
+.innerContainer{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    min-width: 800px;
+}
+h1{
+    font-family: 'Fugaz One', cursive;
+    font-weight: 500;
+    font-size: 2.5em;
+}
+
+h2{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 500;
+    font-size: 1.75em;
+}
+p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.15em;
+    line-height: 1.3em;
+    position: relative;
+    left: 0%;
+    max-width: 970px;
+}
+.timeline{
+    position: relative;
+    top: 40px;
+    background-color: #181818;
+    left: 10%;
+    width: 80%;
+    height: 50px;
+    min-width: 800px;
+    padding: 15px 10px 19px 12px;
+    border-radius: 10px;
+}
+.era{
+    display: inline-block;
+
+}
+.eraLine:nth-of-type(odd){
+    float: left;
+    width: 10px;
+}
+.eraLine:nth-of-type(even){
+    display: inline-block;
+    float: right;
+    width: 10px;
+}
+table{
+    border-collapse: separate;
+    border: none;
+}
+td:not(.year){
+    color: white;
+    width: 50px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.year{
+    font-family: 'Fugaz One', cursive;
+    width: 50px;
+    background-color: #181818;
+    padding: 15px;
+    border-radius: 93px;
+    border: 1px dashed white;
+    text-align: center;
+    color: white;
+}
+.segment{
+    height: 6px;
+    background-color: #181818;
+    border-top: 1px dashed white;
+    border-bottom: 1px dashed white;
+
+}
+.backBttn{
+    font-family: 'Fugaz One', cursive;
+    font-size: 1.4em;
+    background-color: #181818;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+    border: none;
+    width: 105px;
+    position: relative;
+    top: 100px;
+    left: 10%;
+
+
+}
+.nextBttn{
+    font-family: 'Fugaz One', cursive;
+    font-size: 1.4em;
+    background-color: #181818;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+    border: none;
+    width: 105px;
+    position: relative;
+    top: 100px;
+    left: 72%;
+
+
+}
+.nextBttn:hover, .backBttn:hover{
+    background-color: #0080ff;
+}
+@media all and (max-width: 950px){
+    .main{
+        left: 235px;
+    }
+
 }
