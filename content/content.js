@@ -12,7 +12,7 @@ var palette = {
 var sectionHeader = {
     1: "Into the World",
     2: "On the Lake",
-    3: "Off to College",
+    3: "Off to School",
     4: "Settling Down",
     5: "Finding Purpose",
     6: "Making an Impact"
