@@ -1,10 +1,11 @@
 /**
  * Created by Jared on 10/18/2017.
  */
+var eraJean = 0;
 
 function sectionSelect( sectionNumber ) {
     $(".innerContainer h1").text(sectionHeader[sectionNumber])
-    //$(".innerContainer p").text("hello");
+    $(".innerContainer p").html(sectionText[sectionNumber]);
     $(".decadeButton:nth-of-type("+ sectionNumber + ")").css({"color": palette[sectionNumber],
         "border":"1px solid " + palette[sectionNumber],"border-left":"35px solid" + palette[sectionNumber]});
     clearBar();
@@ -18,6 +19,21 @@ function advancePBar( era ){
             $("." + i ).css({"background-color":palette[i]});
         }
     }
+}
+
+function seekEra( directionFlag ){
+    if (directionFlag == 1){
+        eraJean += 1;
+        sectionSelect( eraJean )
+    }else{
+        eraJean -= 1;
+        if ( eraJean == 0){
+            location.reload();
+        }
+        sectionSelect( eraJean )
+    }
+
+
 }
 
 function clearBar(){

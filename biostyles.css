@@ -11,7 +11,7 @@ body{
     top: 0px;
     background-color: #181818;
     height: 100vh;
-    width: 20%;
+    width: 25%;
     -webkit-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.46);
     -moz-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.46);
     box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.46);
@@ -111,7 +111,7 @@ a{
     outline: none;
 }
 .eraPhoto{
-    width: 250px;
+    max-width: 320px;
     float: right;
     margin: 20px;
     border: 10px solid white;
@@ -121,7 +121,7 @@ a{
 }
 .main{
     position: absolute;
-    left: 20%;
+    left: 25%;
     min-width: 800px;
 }
 .innerContainer{
@@ -129,6 +129,7 @@ a{
     width: 80%;
     left: 10%;
     min-width: 800px;
+    min-height: 600px;
 }
 h1{
     font-family: 'Fugaz One', cursive;
@@ -144,7 +145,7 @@ h2{
 p{
     font-family: 'Rubik', sans-serif;
     font-size: 1.15em;
-    line-height: 1.3em;
+    line-height: 1.5em;
     position: relative;
     left: 0%;
     max-width: 970px;
