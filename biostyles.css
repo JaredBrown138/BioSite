@@ -4,38 +4,37 @@
 
 body{
     margin: 0;
-
 }
+
 .asideMenu{
     position: absolute;
-    top: 0px;
+    top: 0;
     background-color: #181818;
-    height: 100vh;
+    height: 102vh;
     width: 25%;
-    -webkit-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.46);
-    -moz-box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.46);
-    box-shadow: 4px 0px 5px 0px rgba(0,0,0,0.46);
+    -webkit-box-shadow: 4px 0 5px 0 rgba(0,0,0,0.46);
+    -moz-box-shadow: 4px 0 5px 0 rgba(0,0,0,0.46);
+    box-shadow: 4px 0 5px 0 rgba(0,0,0,0.46);
     z-index: 100;
     min-width: 230px;
-
 }
+
 .profilePhoto{
     width: 60%;
     position: relative;
     margin-top: 40px;
     margin-left: 18%;
     border: 10px solid white;
-    -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
     filter: grayscale(100%);
-
 }
-
 
 .main{
     height: 100%;
 }
+
 .name{
     font-family: 'Fugaz One', cursive;
     font-size: 2.8em;
@@ -44,52 +43,57 @@ body{
     margin-top: 15px;
     /*text-shadow: 3px 3px 7px rgba(150, 150, 150, 0.33); */
 }
+
 .name:hover{
     text-decoration: underline;
 }
+
 h3{
     font-family: 'Fugaz One', cursive;
     font-weight: 500;
     font-size: 1.25em;
     color: white;
-
 }
+
 .githubBox{
     position: relative;
     width: 100%;
     text-align: center;
     margin-top: 100px;
-
 }
+
 .githubLink h3{
     display: inline-flex;
     position: relative;
     bottom: 15px;
     padding-left: 10px;
 }
+
 .githubLink{
     display: inline;
 }
+
 .githubPhoto{
     display: inline-flex;
     height: 50px;
 }
+
 a:visited{
     text-decoration: none;
 }
+
 a{
     text-decoration: none;
 }
+
 .decadeContainer{
     width: 100%;
     background-color: #181818;
 
     position: relative;
     padding-bottom: 5px;
-
-
-
 }
+
 .decadeButton{
     display: block;
     width: 70%;
@@ -101,29 +105,32 @@ a{
     color: white;
     font-family: 'Source Code Pro', monospace;
     text-align: center;
-    -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
     border: 1px solid white;
     border-left: 35px solid white;
 }
 .decadeButton:focus{
     outline: none;
 }
+
 .eraPhoto{
     max-width: 320px;
     float: right;
     margin: 20px;
     border: 10px solid white;
-    -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
 }
+
 .main{
     position: absolute;
     left: 25%;
     min-width: 800px;
 }
+
 .innerContainer{
     position: relative;
     width: 80%;
@@ -131,6 +138,7 @@ a{
     min-width: 800px;
     min-height: 600px;
 }
+
 h1{
     font-family: 'Fugaz One', cursive;
     font-weight: 500;
@@ -142,15 +150,17 @@ h2{
     font-weight: 500;
     font-size: 1.75em;
 }
+
 p{
     font-family: 'Rubik', sans-serif;
     font-size: 1.15em;
     line-height: 1.5em;
     position: relative;
-    left: 0%;
+    left: 0;
     max-width: 970px;
     text-align: justify;
 }
+
 .timeline{
     position: relative;
     top: 40px;
@@ -161,33 +171,37 @@ p{
     min-width: 800px;
     padding: 15px 10px 19px 12px;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
 }
+
 .era{
     display: inline-block;
 
 }
+
 .eraLine:nth-of-type(odd){
     float: left;
     width: 10px;
 }
+
 .eraLine:nth-of-type(even){
     display: inline-block;
     float: right;
     width: 10px;
 }
+
 table{
     border-collapse: separate;
     border: none;
 }
+
 td:not(.year){
     color: white;
     width: 50px;
     margin: 0;
     padding: 0;
-
 }
 
 .year{
@@ -200,6 +214,7 @@ td:not(.year){
     text-align: center;
     color: white;
 }
+
 .segment{
     height: 6px;
     background-color: #181818;
@@ -207,6 +222,7 @@ td:not(.year){
     border-bottom: 1px dashed white;
 
 }
+
 .backBttn{
     font-family: 'Fugaz One', cursive;
     font-size: 1.4em;
@@ -219,12 +235,11 @@ td:not(.year){
     position: relative;
     top: 100px;
     left: 10%;
-    -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-
-
+    -webkit-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
 }
+
 .nextBttn{
     font-family: 'Fugaz One', cursive;
     font-size: 1.4em;
@@ -237,15 +252,15 @@ td:not(.year){
     position: relative;
     top: 100px;
     left: 72%;
-    -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.29);
-
-
+    -webkit-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
 }
+
 .nextBttn:hover, .backBttn:hover{
     background-color: #0080ff;
 }
+
 @media all and (max-width: 950px){
     .main{
         left: 235px;
@@ -253,8 +268,8 @@ td:not(.year){
     .asideMenu{
         height: 125vh;
     }
-
 }
+
 @media all and (max-width: 1500px){
     .main{
         left: 235px;
@@ -262,5 +277,4 @@ td:not(.year){
     .asideMenu{
         height: 135vh;
     }
-
 }
