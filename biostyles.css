@@ -10,7 +10,7 @@ body{
     position: absolute;
     top: 0;
     background-color: #181818;
-    height: 102vh;
+    height: 103vh;
     width: 25%;
     -webkit-box-shadow: 4px 0 5px 0 rgba(0,0,0,0.46);
     -moz-box-shadow: 4px 0 5px 0 rgba(0,0,0,0.46);
@@ -59,7 +59,7 @@ h3{
     position: relative;
     width: 100%;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 5%;
 }
 
 .githubLink h3{
@@ -266,7 +266,7 @@ td:not(.year){
         left: 235px;
     }
     .asideMenu{
-        height: 125vh;
+        height: 100vh;
     }
 }
 
@@ -276,5 +276,12 @@ td:not(.year){
     }
     .asideMenu{
         height: 135vh;
+    }
+}
+
+@media all and (max-height: 855px){
+
+    .asideMenu{
+       height: 200vh;
     }
 }
