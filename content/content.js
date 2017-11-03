@@ -1,4 +1,9 @@
-
+/**
+ *
+ * These are objects used in the Javascript to change the content of the
+ * page as the user navigates from era to era.
+ * 
+ */
 var palette = {
     1:"#8299ED",
     2:"#A89DED",
