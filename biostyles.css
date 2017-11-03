@@ -261,7 +261,7 @@ td:not(.year){
     background-color: #0080ff;
 }
 
-@media all and (max-width: 950px){
+@media all and (max-width: 900px){
     .main{
         left: 235px;
     }
@@ -270,7 +270,7 @@ td:not(.year){
     }
 }
 
-@media all and (max-width: 1500px){
+@media all and (max-width: 1300px){
     .main{
         left: 235px;
     }
