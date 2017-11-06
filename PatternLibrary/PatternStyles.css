@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo|Nova+Mono|Rubik');
+@import url('https://fonts.googleapis.com/css?family=Arimo|Nova+Mono|Rubik');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
+
 
 html{
- background-color: #616161;
+ background-color: #181818;
 }
 
 body{
@@ -24,10 +27,10 @@ body{
     text-decoration: underline;
 }
 h1{
-    text-align: center;
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Fugaz One', cursive;
     font-weight: 500;
     font-size: 2.5em;
+    text-align: center;
 }
 
 h2{
@@ -75,10 +78,21 @@ img{
     padding: 10px;
 }
 .asideMenu {
-    width: 350px;
-    margin: auto;
-    font-family: 'Rubik', sans-serif;
-    border-left: 20px solid #8299ED;
+    display: block;
+    width: 70%;
+    background-color: #181818;
+    font-size: 1.5em;
+    margin-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    -webkit-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    box-shadow: 0 0 12px 2px rgba(0,0,0,0.29);
+    border: 1px solid white;
+    border-left: 35px solid white;
 
 }
 .asideMenu a:hover{
