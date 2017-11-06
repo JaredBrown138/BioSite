@@ -126,14 +126,25 @@ function asideHover( bool ){
     }
 }
 
+/**
+ * The preloadImages() function preloads all images not initially loaded when visiting
+ * the site. This is important as many of the images aren't loaded in the DOM until
+ * the user clicks on the next era. This means that another request must be sent for
+ * the image. Instead, this function loads all of these images when this function
+ * is called. It does this by creating image objects for each of the images. This
+ * function should be deferred until all other content for the landing page
+ * is loaded.
+ *
+ * @param imageContainer
+ * @returns void
+ */
 function preloadImages( imageContainer ){
-    imageContainer = imagePaths;
     var i = 0;
     for ( var key in imageContainer){
         if (imageContainer.hasOwnProperty(key)){
-           imageObjects[i] = new Image();
-           imageObjects[i].src = imageContainer[key];
-           console.log(imageContainer[key]);
+            imageObjects[i] = new Image();
+            imageObjects[i].src = imageContainer[key];
+            console.log(imageContainer[key]);
         }
     }
 }
