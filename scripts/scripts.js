@@ -8,6 +8,7 @@
  */
 
 var eraJean = 0; //Keeps track of era
+var imageObjects = [];
 
 /**
  * The sectionSelect() function changes the content on the
@@ -124,3 +125,17 @@ function asideHover( bool ){
         }
     }
 }
+
+function preloadImages( imageContainer ){
+    imageContainer = imagePaths;
+    var i = 0;
+    for ( var key in imageContainer){
+        if (imageContainer.hasOwnProperty(key)){
+           imageObjects[i] = new Image();
+           imageObjects[i].src = imageContainer[key];
+           console.log(imageContainer[key]);
+        }
+    }
+}
+
+
