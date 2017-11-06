@@ -11,8 +11,8 @@ var palette = {
     4:"#F3E3D9",
     5:"#f0a4e2",
     6:"#ede4a4",
-    7:"#181818",
-}
+    7:"#181818"
+};
 
 var sectionHeader = {
     1: "Into the World",
@@ -21,7 +21,15 @@ var sectionHeader = {
     4: "Settling Down",
     5: "Finding Purpose",
     6: "Making an Impact"
-}
+};
+
+var imagePaths = {
+    parents: "media/parents.jpg",
+    onLake: "media/OnLake.jpg",
+    school79: "media/school79.jpg",
+    wedding: "media/wedding.jpg",
+    vbs2016: "media/vbs2016.jpg"
+};
 
 var sectionText = {
     1: "<img class=\"eraPhoto\" src=\"media/parents.jpg\" />Birth (1968) – Jean Brown was born in Jamestown NY, south of Buffalo. Her parents are Kenneth and Mary Corey. " +
@@ -60,4 +68,4 @@ var sectionText = {
     "Her time was devoted to children both inside the church and outside. After working at HeadStart for close to 10 " +
     "years, she was offered a job as a Children’s Pastor and accepted it in the summer or 2017. She continues to make " +
     "a difference in the lives of the children she teaches and cares for."
-}
+};
