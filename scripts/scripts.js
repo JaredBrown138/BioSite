@@ -7,8 +7,17 @@
  *
  */
 
-var eraJean = 0; //Keeps track of era
-var imageObjects = [];
+
+var eraJean = {
+    era: 0,
+    increment: function(){
+        this.era += 1;
+    },
+    decrement: function () {
+        this.era -= 1;
+    }
+};
+var imageObjects = []; //Holds the image objects for preloading
 
 /**
  * The sectionSelect() function changes the content on the
@@ -75,10 +84,10 @@ function advancePBar( era ){
  */
 function seekEra( directionFlag ){
     if (directionFlag == 1){
-        eraJean += 1;
-        sectionSelect( eraJean )
+        eraJean.increment();
+        sectionSelect( eraJean.era )
     }else{
-        eraJean -= 1;
+        eraJean.decrement();
         /**
          * If the user presses the back button while on the first era, the
          * page reloads bringing the user back to the "Meet Jean Brown"
@@ -86,10 +95,10 @@ function seekEra( directionFlag ){
          * object, making it unnecessary to reload the page. This is a
          * future TODO.
          */
-        if ( eraJean == 0){
+        if ( eraJean.era == 0){
             location.reload();
         }
-        sectionSelect( eraJean )
+        sectionSelect( eraJean.era )
     }
 }
 
@@ -123,6 +132,9 @@ function asideHover( bool ){
             $(".decadeButton:nth-of-type("+ sectionNumber + ")").css({"color": "white",
                 "border":"1px solid white","border-left":"35px solid white"});
         }
+        for ( var x = 1; x <= (eraJean.era); x++){
+            sectionSelect(x);
+        }
     }
 }
 
@@ -148,5 +160,6 @@ function preloadImages( imageContainer ){
         }
     }
 }
+
 
 
