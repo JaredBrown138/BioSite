@@ -9,7 +9,7 @@
 
 
 var eraJean = {
-    era: 0,
+    era: 0, //Keeps track of the current era
     increment: function(){
         this.era += 1;
     },
@@ -33,10 +33,28 @@ var imageObjects = []; //Holds the image objects for preloading
 function sectionSelect( sectionNumber ) {
     $(".innerContainer h1").text(sectionHeader[sectionNumber])
     $(".innerContainer p").html(sectionText[sectionNumber]);
-    $(".decadeButton:nth-of-type("+ sectionNumber + ")").css({"color": palette[sectionNumber],
-        "border":"1px solid " + palette[sectionNumber],"border-left":"35px solid" + palette[sectionNumber]});
+    updateColors(sectionNumber);
+}
+
+function updateColors( sectionNumber ) {
+    clearAside();
+    advanceAside( sectionNumber );
     clearBar();
     advancePBar( sectionNumber );
+}
+
+
+/**
+ * The clearAside() function resets the color or all
+ * aside buttons (decade buttons) to white. This function
+ * is called before the advanceAside() function.
+ *
+ * @params none
+ * @returns void
+ */
+function clearAside(){
+    $(".decadeButton").css({"color": "white",
+        "border":"1px solid " + "white","border-left":"35px solid white"});
 }
 
 /**
@@ -53,6 +71,23 @@ function clearBar(){
 }
 
 /**
+ * The advanceAside() function iterates through all previous
+ * ages and changes the styling of the buttons in the aside
+ * to make the progress bar. This function is called after
+ * the clearAside() function which resets the aside.
+ *
+ * @param sectionNumber
+ * @returns void
+ */
+function advanceAside( sectionNumber ){
+    for( var i = 1; i <= sectionNumber; i++ ){
+        $(".decadeButton:nth-of-type("+ i + ")").css({"color": palette[i],
+            "border":"1px solid " + palette[i],"border-left":"35px solid" + palette[i]});
+
+    }
+}
+
+/**
  * The advancePBar() function advances the bar by looping
  * through all relevant eras and setting the respective
  * background colors as specified by the era's entry in
@@ -64,7 +99,7 @@ function clearBar(){
 function advancePBar( era ){
     for (var i = 1; i <= era; i++){
         $("#year" + i ).css({"background-color":palette[i]});
-        if ( era != 1){
+        if ( era !== 1){
             $("." + i ).css({"background-color":palette[i]});
         }
     }
@@ -83,11 +118,14 @@ function advancePBar( era ){
  * @returns void
  */
 function seekEra( directionFlag ){
-    if (directionFlag == 1){
+    if (directionFlag === 1){
         eraJean.increment();
-        sectionSelect( eraJean.era )
+        sectionSelect( eraJean.era );
     }else{
         eraJean.decrement();
+        clearAside();
+        sectionSelect( eraJean.era );
+
         /**
          * If the user presses the back button while on the first era, the
          * page reloads bringing the user back to the "Meet Jean Brown"
@@ -95,7 +133,7 @@ function seekEra( directionFlag ){
          * object, making it unnecessary to reload the page. This is a
          * future TODO.
          */
-        if ( eraJean.era == 0){
+        if ( eraJean.era === 0){
             location.reload();
         }
         sectionSelect( eraJean.era )
@@ -112,7 +150,7 @@ function seekEra( directionFlag ){
  * @returns void
  */
 function asideHover( bool ){
-    if ( bool == true ){
+    if ( bool === true ){
         $(".asideMenu").hover( function () {
             $(".profilePhoto").css({"filter":"none"})
         });
@@ -120,21 +158,19 @@ function asideHover( bool ){
         $(".profilePhoto").css({"filter":"grayscale(100%)"})
     }
 
-    if ( bool == true ){
+    if ( bool === true ){
         for ( var i = 1; i <7; i++){
-            var sectionNumber = i;
+            sectionNumber = i;
             $(".decadeButton:nth-of-type("+ sectionNumber + ")").css({"color": palette[sectionNumber],
                 "border":"1px solid " + palette[sectionNumber],"border-left":"35px solid" + palette[sectionNumber]});
         }
     }else{
-        for ( var i = 1; i <7; i++){
+        for ( i = 1; i <7; i++){
             var sectionNumber = i;
             $(".decadeButton:nth-of-type("+ sectionNumber + ")").css({"color": "white",
                 "border":"1px solid white","border-left":"35px solid white"});
         }
-        for ( var x = 1; x <= (eraJean.era); x++){
-            sectionSelect(x);
-        }
+        iterateColors(eraJean.era);
     }
 }
 
@@ -158,6 +194,20 @@ function preloadImages( imageContainer ){
             imageObjects[i].src = imageContainer[key];
             console.log(imageContainer[key]);
         }
+    }
+}
+
+/**
+ * The iterateColors() function calls the updateColors() function in order to
+ * make sure that the aside is left with the same colors as it had before
+ * it was hovered over (coloring all buttons in the aside).
+ *
+ * @params era
+ * @returns void
+ */
+function iterateColors( era ){
+    for ( var x = 1; x <= (era); x++){
+        updateColors(x);
     }
 }
 
