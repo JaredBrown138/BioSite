@@ -67,9 +67,9 @@ figcaption{
 }
 img{
     border: 20px solid white;
-    -webkit-box-shadow: 0px -1px 10px 6px rgba(0,0,0,0.12);
-    -moz-box-shadow: 0px -1px 10px 6px rgba(0,0,0,0.12);
-    box-shadow: 0px -1px 10px 6px rgba(0,0,0,0.12);
+    -webkit-box-shadow: 0 -1px 10px 6px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 -1px 10px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 -1px 10px 6px rgba(0,0,0,0.12);
     position: relative;
     left: -20px;
 }
@@ -77,7 +77,7 @@ img{
     display: block;
     padding: 10px;
 }
-.asideMenu {
+.asideMenu a{
     display: block;
     width: 70%;
     background-color: #181818;
@@ -95,7 +95,33 @@ img{
     border-left: 35px solid white;
 
 }
-.asideMenu a:hover{
-    background-color: #DCCAD6;
-    color: white;
+
+.asideMenu a:nth-of-type(1){
+    color: #8299ED;
+    border-color: #8299ED;
+}
+
+.asideMenu a:nth-of-type(2){
+    color: #A89DED;
+    border-color: #A89DED;
+}
+
+.asideMenu a:nth-of-type(3){
+    color: #DCCAD6;
+    border-color: #DCCAD6;
+}
+
+.asideMenu a:nth-of-type(4){
+    color: #F3E3D9;
+    border-color: #F3E3D9;
+}
+
+.asideMenu a:nth-of-type(5){
+    color: #f0a4e2;
+    border-color: #f0a4e2;
+}
+
+.asideMenu a:nth-of-type(6){
+    color: #ede4a4;
+    border-color: #ede4a4;
 }
