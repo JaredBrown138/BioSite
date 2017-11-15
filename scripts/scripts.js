@@ -31,11 +31,19 @@ var imageObjects = []; //Holds the image objects for preloading
  * @returns void
  */
 function sectionSelect( sectionNumber ) {
-    $(".innerContainer h1").text(sectionHeader[sectionNumber])
+    $(".innerContainer h1").text(sectionHeader[sectionNumber]);
     $(".innerContainer p").html(sectionText[sectionNumber]);
     updateColors(sectionNumber);
 }
 
+/**
+ * The updateColors() function takes the sectionNumber (era) and
+ * changes the aside and progress bar to give them the appropriate
+ * styles based on the era chosen.
+ *
+ * @param sectionNumber
+ * @returns void
+ */
 function updateColors( sectionNumber ) {
     clearAside();
     advanceAside( sectionNumber );
